@@ -1,0 +1,17 @@
+{
+    "name": "el7cosmos/drupal-benchmarks",
+    "require": {
+        "drupal/core-uuid": "^8.5",
+        "ramsey/uuid": "^3.7"
+    }
+    "require-dev": {
+        "phpbench/phpbench": "^0.14.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abi أب <Luhur Abdi Rizal>",
+            "email": "el@elabee.me"
+        }
+    ],
+}
