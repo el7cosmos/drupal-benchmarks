@@ -2,6 +2,7 @@
 
 namespace Benchmarks;
 
+use Drupal\Component\Uuid\Pecl;
 use Drupal\Component\Uuid\Php;
 use PhpBench\Benchmark\Metadata\Annotations\Groups;
 use PhpBench\Benchmark\Metadata\Annotations\Iterations;
@@ -22,10 +23,19 @@ class UuidBench
 
     /**
      * @return string
+     */
+    public function benchPecl(): string
+    {
+        $uuid = new Pecl();
+        return $uuid->generate();
+    }
+
+    /**
+     * @return string
      *
      * @see \Drupal\Component\Uuid\Php
      */
-    public function benchDrupalUuid(): string
+    public function benchDrupal(): string
     {
         $uuid = new Php();
         return $uuid->generate();
@@ -36,7 +46,7 @@ class UuidBench
      *
      * @see \Ramsey\Uuid\Uuid
      */
-    public function benchRamseyUuid4(): string
+    public function benchRamsey(): string
     {
         $uuid = Uuid::uuid4();
         return $uuid->toString();
