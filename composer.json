@@ -3,7 +3,7 @@
     "require": {
         "drupal/core-uuid": "^8.5",
         "ramsey/uuid": "^3.7"
-    }
+    },
     "require-dev": {
         "phpbench/phpbench": "^0.14.0"
     },
@@ -13,5 +13,5 @@
             "name": "Abi أب <Luhur Abdi Rizal>",
             "email": "el@elabee.me"
         }
-    ],
+    ]
 }
